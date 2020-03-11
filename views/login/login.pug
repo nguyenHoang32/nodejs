@@ -1,0 +1,11 @@
+extends ../layout/common.pug
+block content
+    h1 Login
+    form(action="/login", method="POST" )
+        div
+            label(for="email") Email
+            input(type="text", name="email", id="email")
+        div    
+            label(for="password") Password
+            input(type="password", name="password", id="password")
+        button Login

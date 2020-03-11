@@ -1,0 +1,19 @@
+extends ../layout/common.pug
+block content
+    h1 User List
+    h2(style="color:red") #{user.name}
+    table.table
+        tr
+            th Avatar
+            th Name
+            th Phone
+        if(!users)
+        each user in users  
+            tr
+                td
+                    img(src=user.path, width=100)
+                td=user.name
+                td=user.phone 
+                td    
+                    a(href="/users" + "/" + user.id) View
+                

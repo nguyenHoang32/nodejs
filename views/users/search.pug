@@ -1,0 +1,6 @@
+h1 Search User
+ul
+    each user in result
+        li
+            span=user.name
+            a(href="/users" + "/" + user.id) View

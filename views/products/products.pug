@@ -1,0 +1,15 @@
+extends ../layout/common.pug
+block content
+    h1 Products
+    div(style="display: grid;grid-template-columns: 25% 25% 25% 25%;")
+        each product in products
+            div
+                p=product.name
+                img(src=product.image, width="300")
+                p=product.description
+                a(href="/cart/add/" + product.id) Add to cart
+    - var n = 1;
+    while n <= numberPage
+        a(href="/products?page=" + n)
+            span=n++
+        

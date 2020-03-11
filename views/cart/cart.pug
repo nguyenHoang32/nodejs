@@ -1,0 +1,16 @@
+extends ../layout/common
+block content
+    table.table
+        tr
+            th Avatar
+            th Name
+            th Amount
+        if carts
+            each cart in carts
+                tr
+                    td
+                        img(src=cart.image,width=200)
+                    td=cart.name
+                    td=cart.amount
+
+

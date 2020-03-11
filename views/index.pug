@@ -1,0 +1,11 @@
+extends ./layout/common.pug
+block content
+        
+ h1 Hello
+ a(href="/users") Users List
+ div
+ a(href="/users/create") Create user
+ form(action="/users/search", method="GET")
+ input(type="text" name="name" placeholder="Name")
+ button(id="btn-search") Search
+   
